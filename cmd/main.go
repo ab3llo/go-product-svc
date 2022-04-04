@@ -7,7 +7,7 @@ import (
 
 	"github.com/ab3llo/go-product-svc/pkg/config"
 	"github.com/ab3llo/go-product-svc/pkg/db"
-	"github.com/ab3llo/go-product-svc/pkg/product/pb"
+	"github.com/ab3llo/go-product-svc/pkg/pb"
 	"github.com/ab3llo/go-product-svc/pkg/services"
 	"google.golang.org/grpc"
 )

@@ -22,7 +22,7 @@ message CreateProductRequest {
 message CreateProductResponse {
     int64 status = 1;
     string error = 2;
-    string productId = 3;
+    string id = 3;
 }
 
 //FindOne 
@@ -31,12 +31,12 @@ message FindOneData {
     string id = 1;
     string name =2 ;
     string sku = 3;
-    string stock = 4;
-    string price = 5;
+    int64 stock = 4;
+    float price = 5;
 }
 
 message FindOneRequest {
-    string productId = 1;
+    string id = 1;
 }
 
 message FindOneResponse {

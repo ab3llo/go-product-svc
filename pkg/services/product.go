@@ -86,9 +86,10 @@ func (s *Server) DecreaseStock(ctx context.Context, req *pb.DecreaseStockRequest
 		}, nil
 	}
 
-	product.Stock = product.Stock - 1
+	product.Stock = product.Stock - req.Quantity
 	s.DbConnection.DB.Save(&product)
 
+	log.Id = uuid.New().String()
 	log.OrderId = req.OrderId
 	log.ProductRefer = product.Id
 
